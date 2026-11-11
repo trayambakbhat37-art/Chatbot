@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4f0" />
+    <title>Forma — a thoughtful chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="Forma home"><span class="brand-mark">f.</span><span>forma</span></a>
+        <button class="new-chat" id="newChat"><span>＋</span> New chat <kbd>⌘ K</kbd></button>
+        <div class="side-label">YOUR SPACE</div>
+        <button class="nav-item active"><span class="nav-icon">◷</span> Conversations</button>
+        <button class="nav-item" id="savedNav"><span class="nav-icon">☆</span> Saved prompts</button>
+        <div class="history-label"><span class="side-label">RECENT</span><span class="muted-count">Today</span></div>
+        <div class="history-list" id="historyList"></div>
+        <div class="sidebar-bottom">
+          <div class="status-card"><span class="status-dot"></span><div><strong>Private by design</strong><small>Your chats stay yours</small></div><span class="shield">♢</span></div>
+          <button class="profile"><span class="avatar">Y</span><span class="profile-text"><strong>You</strong><small>Personal workspace</small></span><span class="more">···</span></button>
+        </div>
+      </aside>
+      <main class="main-area">
+        <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button><div class="model-pill"><span class="model-spark">✳</span> Forma Assistant <span class="chevron">⌄</span></div><div class="top-actions"><span class="connection"><i></i> Ready</span><button class="icon-button" id="clearChat" title="Clear conversation" aria-label="Clear conversation">↺</button><button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">◐</button></div></header>
+        <section class="conversation" id="conversation" aria-live="polite">
+          <div class="welcome" id="welcome">
+            <div class="welcome-orb"><span>✳</span><i></i></div>
+            <div class="eyebrow">A LITTLE CLARITY, ON DEMAND</div>
+            <h1>Good ideas start<br />with a <em>conversation.</em></h1>
+            <p>Ask a question, work through an idea, or just get a fresh perspective. I'm here for all of it.</p>
+            <div class="suggestions">
+              <button class="suggestion" data-prompt="Help me plan a focused, balanced week"><span class="suggestion-icon lilac">✦</span><span><strong>Plan my week</strong><small>Make space for what matters</small></span><span class="suggestion-arrow">↗</span></button>
+              <button class="suggestion" data-prompt="Explain a complex idea in simple terms"><span class="suggestion-icon peach">⌘</span><span><strong>Untangle an idea</strong><small>Make the complicated clear</small></span><span class="suggestion-arrow">↗</span></button>
+              <button class="suggestion" data-prompt="Help me brainstorm some creative ideas"><span class="suggestion-icon mint">✳</span><span><strong>Get creative</strong><small>Find a new angle to explore</small></span><span class="suggestion-arrow">↗</span></button>
+              <button class="suggestion" data-prompt="Help me write a thoughtful message"><span class="suggestion-icon blue">↗</span><span><strong>Find the right words</strong><small>Write something that sounds like you</small></span><span class="suggestion-arrow">↗</span></button>
+            </div>
+          </div>
+          <div class="messages" id="messages"></div>
+        </section>
+        <footer class="composer-wrap"><form class="composer" id="chatForm"><textarea id="messageInput" rows="1" placeholder="Ask anything, or share what's on your mind…" aria-label="Message"></textarea><div class="composer-tools"><span class="composer-hint">Thoughtful answers start with good questions</span><button type="submit" class="send-button" id="sendButton" aria-label="Send message">↑</button></div></form><div class="disclaimer">Forma can make mistakes. For important decisions, double-check the details.</div></footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

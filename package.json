@@ -1,0 +1,8 @@
+{
+  "name": "forma-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A thoughtful, private-by-default AI chat interface",
+  "scripts": {"start": "node server.js"},
+  "engines": {"node": ">=18"}
+}
